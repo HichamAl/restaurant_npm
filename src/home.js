@@ -1,7 +1,15 @@
-export {headingText, image}
+export {home}
 
-const headingText = document.createElement("h1");
-headingText.innerHTML = 'The best website every YOUKNOW';
+function home(){
+    const headingText = document.createElement("h1");
+    headingText.innerHTML = 'The is the Homepage content coming soon...';
 
-const image = document.createElement("img");
-image.setAttribute("href", "https://mnarcastle.ma/wp-content/uploads/2025/08/Safety-in-Morocco.jpg");
+    const image = document.createElement("IMG");
+    image.setAttribute("src", "https://www.w3schools.com/Jsref/img_pulpit.jpg");
+
+    const container = document.querySelector("#content");
+    container.appendChild(headingText);
+    container.appendChild(image);
+}
+
+

@@ -1,7 +1,34 @@
 import "./styles.css";
-import { headingText, image } from "./home";
+import { home } from "./home";
+import { menu } from "./menu";
+import { contact } from "./contact";
 
-console.log("test");
+const homeButton = document.querySelector("#home");
+const menuButton = document.querySelector("#menu");
+const contactButton = document.querySelector("#contact");
 
-const container = document.querySelector("#content");
-container.appendChild(headingText, image);
+home();
+
+homeButton.addEventListener("click", ()=>{
+    const container = document.querySelector("#content");
+    while (container.firstChild) {
+        container.removeChild(container.firstChild);
+    }
+    home();
+})
+
+menuButton.addEventListener("click", ()=>{
+    const container = document.querySelector("#content");
+    while (container.firstChild) {
+        container.removeChild(container.firstChild);
+    }
+    menu();
+})
+
+contactButton.addEventListener("click", ()=>{
+    const container = document.querySelector("#content");
+    while (container.firstChild) {
+        container.removeChild(container.firstChild);
+    }
+    contact();
+})
